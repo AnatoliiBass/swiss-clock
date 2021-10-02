@@ -1,0 +1,112 @@
+.main-slider {
+   position: relative;
+   &__body {
+      display: flex;
+      transition: all ease 1s;
+   }
+   &__control {
+      position: absolute;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::after {
+         content: "";
+         background-color: #fff;
+         position: absolute;
+         width: 70%;
+         height: 70%;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) rotate(-45deg);
+      }
+   }
+}
+
+.control-main-slider {
+   &__arrow {
+      position: relative;
+      z-index: 2;
+      background: url("../img/icons/arrow_left.png") 0 0 no-repeat;
+      width: 14px;
+      height: 24px;
+      cursor: pointer;
+   }
+
+   &__decor {
+      position: relative;
+      z-index: 2;
+      margin: 0px 12px;
+      animation: rotate 5s infinite linear;
+   }
+
+   &__arrow-next {
+      transform: rotate(-180deg);
+   }
+}
+@keyframes rotate {
+   0% {
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.item-main-slider {
+   text-align: center;
+   padding: 30px 0px 100px 0px;
+   position: relative;
+   &__content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+   }
+   &__container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__text {
+      max-width: 700px;
+      margin: 25px auto 0px auto;
+      font-size: 15px;
+      line-height: calc(25 / 15);
+      flex: 1 1 auto;
+      color: #ffffff;
+   }
+
+   &__btn {
+      display: inline-flex;
+      width: 250px;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      margin: 58px 0px 0px 0px;
+      border: 3px solid #bb9c66;
+      span {
+         font-family: "PFDin";
+         font-size: 15px;
+         line-height: 21px;
+         font-weight: 400;
+         text-transform: uppercase;
+         letter-spacing: 0.1em;
+         color: #ffffff;
+      }
+      &:hover {
+         opacity: 0.6;
+      }
+   }
+
+   &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+}

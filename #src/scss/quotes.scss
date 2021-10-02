@@ -1,0 +1,99 @@
+.quotes {
+   padding: 15px 0px 75px 0px;
+   &__container {
+      overflow: hidden;
+   }
+}
+
+.slider-quotes {
+   &__body {
+      display: flex;
+      transition: all ease 1s;
+   }
+
+   &__slide {
+      display: flex;
+      align-items: center;
+   }
+
+   &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      flex: 0 0 320px/950px * 100%;
+      img {
+         max-width: 100%;
+      }
+   }
+
+   &__content {
+      flex: 1 1 515px;
+   }
+
+   &__title {
+      font-size: 25px;
+      line-height: calc(30 / 25);
+      font-style: italic;
+      margin: 0px 0px 30px/25px * 1em 0px;
+   }
+
+   &__info {
+      font-size: 15px;
+      line-height: 25px;
+      font-style: normal;
+      color: #1c242a;
+   }
+}
+.control-slider-quotes {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 400px;
+   margin: 0 auto;
+   &__decor {
+      flex: 0 1 33.333%;
+      display: flex;
+      align-items: center;
+      &::before {
+         content: "";
+         flex: 1 1 auto;
+         height: 1px;
+         background-color: #bb9c66;
+      }
+      &::after {
+         content: "";
+         margin: 0px 0px 0px 5px;
+         width: 10px;
+         border-radius: 50%;
+         height: 10px;
+         border: 1px solid #bb9c66;
+      }
+      &:last-child {
+         flex-direction: row-reverse;
+         &::after {
+            margin: 0px 5px 0px 0px;
+         }
+      }
+   }
+   .fake {
+      display: none;
+   }
+   &__link {
+      flex: 0 1 33.333%;
+      text-align: center;
+   }
+   &__circle {
+      transition: all ease 0.5s;
+      cursor: pointer;
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #bb9c66;
+      border-radius: 50%;
+      background: url("../img/icons/letter_c.png") center no-repeat;
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
+}

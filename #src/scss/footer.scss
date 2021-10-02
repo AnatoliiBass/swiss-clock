@@ -1,0 +1,108 @@
+.footer {
+   padding: 45px 0;
+   background-color: #1c242a;
+   &__container {
+      display: flex;
+      @media (max-width: 767px) {
+         display: block;
+         text-align: center;
+      }
+   }
+
+   &__column {
+      &:first-child {
+         flex: 0 0 180px;
+      }
+   }
+
+   &__column-full {
+      flex: 1 1 auto;
+   }
+
+   &__logo {
+      display: inline-block;
+      margin: 0px 0px 25px 0px;
+      @media (max-width: 767px) {
+         margin: 0px 0px 0px 0px;
+      }
+   }
+
+   &__info {
+      color: #bb9c66;
+      @media (max-width: 767px) {
+         margin: 25px 0px 0px 0px;
+      }
+   }
+
+   &__menu {
+      padding: 0 30px;
+      @media (max-width: 767px) {
+         padding: 0 15px;
+         margin: 0px 0px 20px 0px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+         margin: 15px 15px 0px 0px;
+      }
+      @media (max-width: 767px) {
+         justify-content: center;
+         margin: 15px 7px 0px 7px;
+      }
+   }
+
+   &__link {
+      font-family: "PFDin";
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   &__contacts {
+      text-align: right;
+      padding: 12px 0px 0px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media (max-width: 767px) {
+         align-items: center;
+      }
+   }
+
+   &__phone {
+      white-space: nowrap;
+      display: flex;
+      align-items: flex-start;
+      font-family: "BravoRGRegular";
+      text-transform: uppercase;
+      color: #bb9c66;
+      font-size: 50px;
+      small {
+         font-size: 25px;
+         margin: 2px 5px 0px 0px;
+      }
+      @media (max-width: 992px) {
+         font-size: 40px;
+         small {
+            font-size: 20px;
+         }
+      }
+   }
+
+   &__callback {
+      color: #bb9c66;
+      background: url("../img/icons/back.png") left no-repeat;
+      padding: 0px 0px 0px 12px;
+      span {
+         border-bottom: 1px dashed;
+      }
+   }
+}

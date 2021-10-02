@@ -1,0 +1,220 @@
+//Mixins
+@import "mixins.scss";
+//========================================
+//Шрифты
+@import "fonts.scss";
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+//Шрифт по умолчанию
+$fontfamily: "PT Sans";
+//=================================
+//Переменные
+$minwidth: 320px;
+$mv: 970;
+$md1: $mv + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//=========================================
+//Обнуление, общие параметры
+@import "nullstyle.scss";
+body {
+    color: #000;
+    font-size: 14px;
+}
+//==========================================
+
+//ОБОЛОЧКА
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+//==========================================
+//ОСНОВНАЯ СЕТКА
+.container {
+    max-width: $mv + px;
+    margin: 0 auto;
+    padding: 0 10px;
+    &__lot {
+        overflow: hidden;
+    }
+}
+//==========================================
+//Основной блок
+.page {
+    padding: 75px 0px 0px 0px;
+    flex: 1 1 auto;
+}
+
+//===========================================
+//Фоновий рисунок
+.ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img {
+        display: none;
+    }
+}
+//===========================================
+//Загаловки
+.title {
+    text-align: center;
+    &__item {
+        font-family: "Ceremonios";
+        font-size: 40px;
+        color: #bb9c66;
+        margin: 0px 0px 20px/40px * 1em 0px;
+    }
+    &__main {
+        font-family: "PFDin";
+        font-size: 35px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: calc(40 / 35);
+        letter-spacing: 0.15em;
+        color: #000;
+        @media (max-width: $md3 + px) {
+            font-size: 30px;
+        }
+    }
+    &__main-regular {
+        font-weight: 400;
+    }
+    &__main-w {
+        color: #fff;
+    }
+}
+//===========================================
+.title-info {
+    display: flex;
+    align-items: center;
+    font-family: "PFDin";
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin: 0px 0px 30px 0px;
+    @media (max-width: 767px) {
+        margin: 0px 0px 15px 0px;
+    }
+    span {
+        &:first-child {
+            margin: 0px 10px 0px 0px;
+            picture {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+//===========================================
+//Buttons and inputs
+.input {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: #4f4f4f;
+    display: block;
+    padding: 0 25px;
+    &:hover::placeholder {
+        color: transparent;
+    }
+    &:focus {
+        color: #000;
+        &:invalid {
+            border: 3px solid red;
+        }
+    }
+    &:valid {
+        border: 3px solid green;
+    }
+}
+//===========================================
+//Decors
+
+.block-header {
+    &__title {
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+.block-decor {
+    display: flex;
+    align-items: center;
+    &__items {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: "";
+            height: 1px;
+            width: 100%;
+            flex: 1 1 auto;
+            background-color: #bb9c66;
+        }
+        &::after {
+            content: "";
+            width: 25px/100 * 72;
+            height: 25px/100 * 72;
+            flex: 0 0 25px/100 * 72;
+            border: 1px solid #bb9c66;
+            transform: rotate(-45deg);
+            margin: 0 5px;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            margin: 0 5px;
+            &::before {
+                content: "";
+                height: 10px;
+                width: 10px;
+                flex: 0 0 10px;
+                border-radius: 50%;
+                border: 1px solid #bb9c66;
+                margin: 0px 5px;
+            }
+            &::after {
+                content: "";
+                width: 15px/100 * 72;
+                height: 15px/100 * 72;
+                flex: 0 0 15px/100 * 72;
+                border: 1px solid #bb9c66;
+                transform: rotate(-45deg);
+                margin: 0px 2.5px;
+            }
+        }
+        &:last-child {
+            flex-direction: row-reverse;
+            span {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__icon {
+        text-align: center;
+        flex: 0 0 145px;
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: $md3+px) {
+            flex: 0 0 95px;
+        }
+    }
+}
+
+//===========================================
+//Import
+@import "header.scss";
+@import "main-slider.scss";
+@import "lots.scss";
+@import "categories.scss";
+@import "services.scss";
+@import "quotes.scss";
+@import "info.scss";
+@import "footer.scss";

@@ -1,0 +1,84 @@
+.services {
+   padding: 60px 0;
+   margin: 0px 0px 50px 0px;
+   background-color: #1c242a;
+   &__header {
+      margin: 0px 0px 20px 0px;
+   }
+   &__row {
+      margin: 0 -50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   &__column {
+      padding: 0 50px;
+      flex: 0 1 33.333%;
+      @media (max-width: 975px) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: 650px) {
+         flex: 1 1 100%;
+      }
+   }
+}
+
+.service {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   &__image {
+      height: 205px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__title {
+      font-family: "PFDin";
+      font-size: 21px;
+      line-height: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+   }
+
+   &__text {
+      margin: 23px 0px 0px 0px;
+      font-size: 15px;
+      line-height: 25px;
+      color: #bb9c66;
+   }
+
+   &__btn {
+      margin: 30px 0px 0px 0px;
+      font-family: "PFDin";
+      font-size: 21px;
+      line-height: 25px;
+      width: 100%;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         background-color: #bb9c66;
+         height: 1px;
+         width: 100%;
+         top: 50%;
+         left: 0;
+      }
+      span {
+         background-color: #1c242a;
+         position: relative;
+         z-index: 2;
+         padding: 0px 15px;
+      }
+   }
+}
